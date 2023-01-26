@@ -3,7 +3,7 @@ import ProfileOrderHistoryItem from "./ProfileOrderHistoryItem"
 
 const ProfileOrderHistory = ({orders}) => {
 
-    const orderList = orders.map( order => <ProfileOrderHistoryItem key={order} order={order} />)
+    const orderList = orders.map( (order,index) => <ProfileOrderHistoryItem key={index +'-' + order} order={order} />)
 
     return ( 
 <section>
