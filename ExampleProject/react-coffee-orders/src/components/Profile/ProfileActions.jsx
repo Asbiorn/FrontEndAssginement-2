@@ -1,14 +1,27 @@
 import { Link } from "react-router-dom"
 
-const ProfileActions = () => {
+
+
+const ProfileActions = ({logout}) => {
+
+
+    const handleLogoutClick = () => {
+        if (window.confirm('Are you sure')){
+            // send event to the parent
+            logout()
+            //storageSave(STORAGE_KEY_USER, userResponse)
+
+            
+        }
+    }
 
     return ( 
         <ul>
             <li><Link to="/orders">Orders</Link> </li>
             <li> <button>Clear history</button></li>
-            <li> <button>Log out</button></li>
+            <li> <button onClick={handleLogoutClick}>Logout</button></li>
         </ul>
 
     )
 }
-export default ProfileActions
+export default ProfileActions 
