@@ -13,7 +13,7 @@ function App() {
   return (
     <BrowserRouter>
     <div className="App">
-      <Navbar />
+      <Navbar  />
       <Routes>
         <Route path="/" element={<Login/>} />
         <Route path='/orders' element={<Orders/>} />
