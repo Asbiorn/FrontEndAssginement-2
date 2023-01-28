@@ -1,11 +1,11 @@
-const OrdersCoffeeButton = ({name, image}) => {
+const OrdersCoffeeButton = ({coffee, onSelect}) => {
 return (
-    <button> 
+    <button onClick={ () => onSelect( coffee.id ) }> 
         <aside>
-            <img src={image} alt={name} width="70"></img>
+            <img src={coffee.image} alt={coffee.name} width="70"></img>
          </aside>
          <section>
-            <b>{ name }</b>
+            <b>{ coffee.name }</b>
          </section>
     </button>
 )
