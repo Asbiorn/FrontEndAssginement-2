@@ -1,7 +1,7 @@
 import './App.css';
 import {BrowserRouter, Routes, Route } from 'react-router-dom'
 import Login from './views/Login';
-import Orders from './views/Orders';
+import Translator from './views/Translator';
 import Profile from './views/Profile';
 import Navbar from './components/Navbar/Navbar';
 
@@ -16,7 +16,7 @@ function App() {
       <Navbar  />
       <Routes>
         <Route path="/" element={<Login/>} />
-        <Route path='/orders' element={<Orders/>} />
+        <Route path='/translator' element={<Translator/>} />
         <Route path='/profile' element={<Profile/>} />
       </Routes>
     </div>

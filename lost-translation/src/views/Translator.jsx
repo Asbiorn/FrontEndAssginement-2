@@ -1,13 +1,14 @@
 import { useState } from "react"
-import OrdersForm from "../components/Orders/OrderForm"
-import OrdersCoffeeButton from "../components/Orders/OrdersCoffeeButton"
+import TranslationsForm from "../components/Translations/TranslationsForm"
+import OrdersCoffeeButton from "../components/Translations/OrdersCoffeeButton"
 import withAuth from "../hoc/withAuth"
+import TranslateQuery from "../components/Translations/TranslateQuery"
 
 const COFFEES = [
     {
         id:1,
         name: "Americano",
-        image: "img/americano.png"
+        image: "img/signs/a.png"
     },
     {
         id:2,
@@ -41,19 +42,34 @@ const Orders = () => {
         onSelect={handleCoffeeClicked} />
     })
 
+
+
     return (
     <>
-        <h1>Orders</h1>
-        <section id="coffee-options">
-            {availableCoffees}
+        <h1>Translate</h1>
+
+        <section id="TranslationQueryForm" >
+            <TranslationsForm/>
         </section>
-        <section id="order-notes" >
-            <OrdersForm/>
+        <h4>Translation</h4>
+        
+        <section id="translation">
+       
+
         </section>
-        <h4>Summary</h4>
+
+
         {coffee &&  <p>Selected coffee: {coffee.name }</p>  }
+
+                <section id="coffee-options">
+            {availableCoffees}
+
+        </section>
        
     </>
     )
 }
+
+
+
 export default withAuth(Orders)  

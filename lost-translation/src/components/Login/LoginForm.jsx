@@ -28,8 +28,8 @@ const LoginForm = () => {
         // if user exists => then redirect to Profile.
         //history.push('/profile')
         if(user!=null){
-        navigate('/profile')
-        //console.log(`User has changed to: ${user.usern me}`)
+        navigate('/translator')
+
         }
     }, [user, navigate]) // empty dependencies, only run once.
 
@@ -80,7 +80,7 @@ return (
         </fieldset> 
         <button type="submit" disabled={loading}>Continue</button>
 
-        {loading && <p>Loggin in...</p>}
+        {loading && <p>Logging in...</p>}
         {apiError && <p>{ apiError }</p>}
         </form>
     </>
